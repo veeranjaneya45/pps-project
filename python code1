@@ -1,0 +1,14 @@
+def int_to_binary(num):
+    if num == 0:
+        return "0"
+    
+    binary = ""
+    while num > 0:
+        bit = num & 1
+        binary = binary + str(bit)  
+        num = num >> 1
+    return binary
+
+number = int(input("Enter an integer: "))
+binary_representation = int_to_binary(number)
+print(f"Binary representation of {number} is: {binary_representation}")
